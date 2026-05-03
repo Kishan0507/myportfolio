@@ -27,7 +27,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-%s=emenypi-3tz=pt*ycx
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG', 'True') == 'True'
 
-ALLOWED_HOSTS = ['myportfolio-frontend.onrender.com' ]
+ALLOWED_HOSTS = ['myportfolio-backend.onrender.com' ]
 
 
 # Application definition
