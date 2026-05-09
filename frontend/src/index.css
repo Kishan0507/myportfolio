@@ -13,7 +13,8 @@
   --text: #E5E9F0;
   --text-bright: #FFFFFF;
   --text-dim: #818896;
-  --cyan: #88C0D0; /* Brighter glowing cyan */
+  --cyan: #88C0D0;
+  /* Brighter glowing cyan */
   --blue: #81A1C1;
   --green: #A3BE8C;
   --yellow: #EBCB8B;
@@ -52,14 +53,15 @@ body {
 body::before {
   content: '';
   position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: repeating-linear-gradient(
-    0deg,
-    transparent,
-    transparent 2px,
-    rgba(0, 0, 0, 0.05) 2px,
-    rgba(0, 0, 0, 0.05) 4px
-  );
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: repeating-linear-gradient(0deg,
+      transparent,
+      transparent 2px,
+      rgba(0, 0, 0, 0.05) 2px,
+      rgba(0, 0, 0, 0.05) 4px);
   pointer-events: none;
   z-index: 9999;
 }
@@ -68,13 +70,16 @@ body::before {
 ::-webkit-scrollbar {
   width: 8px;
 }
+
 ::-webkit-scrollbar-track {
   background: var(--bg-darkest);
 }
+
 ::-webkit-scrollbar-thumb {
   background: var(--border);
   border-radius: 4px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: var(--cyan);
 }
@@ -113,12 +118,22 @@ body::before {
   border-radius: 50%;
   transition: opacity 0.2s;
 }
+
 .terminal-titlebar .dot:hover {
   opacity: 0.7;
 }
-.terminal-titlebar .dot.red    { background: var(--red); }
-.terminal-titlebar .dot.yellow { background: var(--yellow); }
-.terminal-titlebar .dot.green  { background: var(--green); }
+
+.terminal-titlebar .dot.red {
+  background: var(--red);
+}
+
+.terminal-titlebar .dot.yellow {
+  background: var(--yellow);
+}
+
+.terminal-titlebar .dot.green {
+  background: var(--green);
+}
 
 .terminal-titlebar .title {
   flex: 1;
@@ -148,6 +163,7 @@ body::before {
 }
 
 .navbar a {
+  position: relative;
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -192,6 +208,7 @@ body::before {
   align-items: center;
   gap: 0;
 }
+
 .prompt-input::before {
   content: '$ ';
   color: var(--prompt);
@@ -221,9 +238,9 @@ body::before {
 .card {
   background: var(--bg-lighter);
   border-left: 3px solid var(--blue);
-  border-top: 1px solid rgba(255,255,255,0.02);
-  border-right: 1px solid rgba(255,255,255,0.02);
-  border-bottom: 1px solid rgba(255,255,255,0.02);
+  border-top: 1px solid rgba(255, 255, 255, 0.02);
+  border-right: 1px solid rgba(255, 255, 255, 0.02);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.02);
   padding: 1.2rem 1.4rem;
   margin: 0.8rem 0;
   border-radius: 8px;
@@ -280,8 +297,15 @@ a:hover {
 }
 
 @keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
 }
 
 /* ─── TYPING ANIMATION ─── */
@@ -296,13 +320,25 @@ a:hover {
 }
 
 @keyframes typing {
-  from { width: 0; }
-  to   { width: 100%; }
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
 }
 
 @keyframes cursor-blink {
-  0%, 100% { border-color: var(--cyan); }
-  50%      { border-color: transparent; }
+
+  0%,
+  100% {
+    border-color: var(--cyan);
+  }
+
+  50% {
+    border-color: transparent;
+  }
 }
 
 /* ─── GITHUB REPO LIST — ls style ─── */
@@ -351,7 +387,8 @@ a:hover {
 }
 
 /* ─── BUTTONS ─── */
-button, .game-button {
+button,
+.game-button {
   background: transparent;
   border: 1px solid var(--cyan);
   color: var(--cyan);
@@ -364,7 +401,8 @@ button, .game-button {
   letter-spacing: 0.3px;
 }
 
-button:hover, .game-button:hover {
+button:hover,
+.game-button:hover {
   background: var(--cyan);
   color: var(--bg);
   box-shadow: 0 0 15px rgba(129, 161, 193, 0.3);
@@ -421,9 +459,9 @@ button:active {
   border-radius: 8px;
   margin: 0.8rem 0;
   border-left: 3px solid var(--yellow);
-  border-top: 1px solid rgba(255,255,255,0.02);
-  border-right: 1px solid rgba(255,255,255,0.02);
-  border-bottom: 1px solid rgba(255,255,255,0.02);
+  border-top: 1px solid rgba(255, 255, 255, 0.02);
+  border-right: 1px solid rgba(255, 255, 255, 0.02);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.02);
   backdrop-filter: blur(8px);
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
@@ -565,24 +603,61 @@ button:active {
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(8px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* ─── STAGGER CHILDREN ─── */
-.stagger > * {
+.stagger>* {
   animation: fadeIn 0.3s ease-out backwards;
 }
-.stagger > *:nth-child(1) { animation-delay: 0.05s; }
-.stagger > *:nth-child(2) { animation-delay: 0.1s; }
-.stagger > *:nth-child(3) { animation-delay: 0.15s; }
-.stagger > *:nth-child(4) { animation-delay: 0.2s; }
-.stagger > *:nth-child(5) { animation-delay: 0.25s; }
-.stagger > *:nth-child(6) { animation-delay: 0.3s; }
-.stagger > *:nth-child(7) { animation-delay: 0.35s; }
-.stagger > *:nth-child(8) { animation-delay: 0.4s; }
-.stagger > *:nth-child(9) { animation-delay: 0.45s; }
-.stagger > *:nth-child(10) { animation-delay: 0.5s; }
+
+.stagger>*:nth-child(1) {
+  animation-delay: 0.05s;
+}
+
+.stagger>*:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.stagger>*:nth-child(3) {
+  animation-delay: 0.15s;
+}
+
+.stagger>*:nth-child(4) {
+  animation-delay: 0.2s;
+}
+
+.stagger>*:nth-child(5) {
+  animation-delay: 0.25s;
+}
+
+.stagger>*:nth-child(6) {
+  animation-delay: 0.3s;
+}
+
+.stagger>*:nth-child(7) {
+  animation-delay: 0.35s;
+}
+
+.stagger>*:nth-child(8) {
+  animation-delay: 0.4s;
+}
+
+.stagger>*:nth-child(9) {
+  animation-delay: 0.45s;
+}
+
+.stagger>*:nth-child(10) {
+  animation-delay: 0.5s;
+}
 
 /* ─── LOADING SPINNER ─── */
 .loading {
@@ -604,7 +679,9 @@ button:active {
 }
 
 @keyframes spin {
-  to { transform: rotate(360deg); }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /* ─── GIT LOG STYLE ─── */
@@ -767,9 +844,9 @@ button:active {
   border-radius: 10px;
   padding: 1.2rem 1.4rem;
   border-left: 3px solid var(--blue);
-  border-top: 1px solid rgba(255,255,255,0.02);
-  border-right: 1px solid rgba(255,255,255,0.02);
-  border-bottom: 1px solid rgba(255,255,255,0.02);
+  border-top: 1px solid rgba(255, 255, 255, 0.02);
+  border-right: 1px solid rgba(255, 255, 255, 0.02);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.02);
   backdrop-filter: blur(8px);
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
@@ -887,9 +964,17 @@ button:active {
 }
 
 @keyframes blink-animation {
-  0% { opacity: 1; }
-  50% { opacity: 0.2; }
-  100% { opacity: 1; }
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.2;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 .blinking-dot {
@@ -902,6 +987,7 @@ button:active {
   padding-top: 1rem;
   margin-top: 2rem;
 }
+
 .interactive-cli input::placeholder {
   color: var(--text-dim);
   opacity: 0.5;

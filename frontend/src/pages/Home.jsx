@@ -35,7 +35,7 @@ function Home() {
   }, [loading])
 
   const name = profile?.name || 'Kishan Gowda D K'
-  const role = profile?.role || 'Software Development Engineer'
+  const role = profile?.role || 'Software Engineer'
   const college = profile?.college || 'University Visvesvaraya College of Engineering, Bangalore'
   const github = profile?.github_username || 'Kishan0507'
   const email = profile?.email || '257kishan@gmail.com'
@@ -51,11 +51,11 @@ function Home() {
     { key: 'SHELL', value: '/bin/bash' },
   ]
 
-  const aboutText = `I am a Software Development Engineer with a strong foundation in building scalable full-stack applications and high-performance backend systems. My technical expertise spans across Python, C++, and modern web frameworks like Django and React. I am passionate about tackling complex engineering challenges, ranging from architecting robust web APIs to exploring low-level networking and system design.
+  const aboutText = `I am a Software Engineer with a strong focus on high-performance backend systems and scalable full-stack architecture. My technical expertise spans Python, C++, and modern frameworks like Django and React. I am deeply passionate about tackling complex engineering challenges—from designing robust web APIs to exploring low-level networking and system design.
 
-In addition to software engineering, I am an active contributor to the open-source community, having authored and merged critical documentation for Haiku OS. I also serve as a Core Member of Google Developer Groups (GDG) at UVCE, where I lead outreach initiatives and technical workshops to foster a thriving developer community of over 2,000 members.
+Beyond my day-to-day coding, I am an active open-source contributor. I have authored and merged critical documentation for Haiku OS, and I serve as a Core Member of Google Developer Groups (GDG) at UVCE, where I lead technical workshops to foster a thriving community of over 2,000 developers.
 
-I am currently seeking opportunities as a Software Development Engineer where I can leverage my problem-solving skills to build impactful, scalable software solutions.`
+I am currently seeking Software Engineering roles where I can leverage my systems programming and full-stack experience to build impactful, scalable solutions.`
 
   return (
     <div className="page fade-in" id="home-page">
