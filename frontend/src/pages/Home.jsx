@@ -53,9 +53,7 @@ function Home() {
 
   const aboutText = `I am a Software Engineer with a strong focus on high-performance backend systems and scalable full-stack architecture. My technical expertise spans Python, C++, and modern frameworks like Django and React. I am deeply passionate about tackling complex engineering challenges—from designing robust web APIs to exploring low-level networking and system design.
 
-Beyond my day-to-day coding, I am an active open-source contributor. I have authored and merged critical documentation for Haiku OS, and I serve as a Core Member of Google Developer Groups (GDG) at UVCE, where I lead technical workshops to foster a thriving community of over 2,000 developers.
-
-I am currently seeking Software Engineering roles where I can leverage my systems programming and full-stack experience to build impactful, scalable solutions.`
+I am currently seeking Software Engineering roles where I can leverage my systems programming and full-stack experience to build impactful, scalable solutions.I serve as a Core Member of Google Developer Groups (GDG) at UVCE, where I lead technical workshops to foster a thriving community of over 2,000 developers.`
 
   return (
     <div className="page fade-in" id="home-page">
