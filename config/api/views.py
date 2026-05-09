@@ -37,10 +37,12 @@ class GitHubReposView(APIView):
         username = profile.github_username if profile else 'Kishan0507'
 
         try:
+            headers = {'User-Agent': 'Kishan0507-Portfolio-App'}
             resp = http_requests.get(
                 f'https://api.github.com/users/Kishan0507/repos',
+                headers=headers,
                 params={'per_page': 30, 'sort': 'updated'},
-                timeout=10,
+                timeout=25,
             )
             resp.raise_for_status()
         except http_requests.RequestException as e:

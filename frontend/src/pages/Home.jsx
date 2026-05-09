@@ -48,9 +48,7 @@ function Home() {
     { key: 'LOCATION', value: 'Bangalore, India' },
     { key: 'GITHUB', value: `github.com/${github}` },
     { key: 'EMAIL', value: email },
-    { key: 'OPEN_SRC', value: 'Open Source Contributor', highlight: true },
     { key: 'SHELL', value: '/bin/bash' },
-    { key: 'OS', value: 'Fedora Linux 41' },
   ]
 
   const aboutText = `I am a Software Development Engineer with a strong foundation in building scalable full-stack applications and high-performance backend systems. My technical expertise spans across Python, C++, and modern web frameworks like Django and React. I am passionate about tackling complex engineering challenges, ranging from architecting robust web APIs to exploring low-level networking and system design.

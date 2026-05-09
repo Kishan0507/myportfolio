@@ -2,7 +2,7 @@ import axios from 'axios';
 
 const API = axios.create({
   baseURL: import.meta.env.VITE_API_URL || 'http://localhost:8000/api/',
-  timeout: 10000,
+  timeout: 25000,
 });
 
 export const fetchProfile = () => API.get('profile/').then(r => r.data);
