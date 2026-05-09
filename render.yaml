@@ -5,6 +5,7 @@ services:
   - type: web
     name: myportfolio-backend
     runtime: python
+    plan: free
     rootDir: config
     buildCommand: chmod +x build.sh && ./build.sh
     startCommand: gunicorn config.wsgi:application
