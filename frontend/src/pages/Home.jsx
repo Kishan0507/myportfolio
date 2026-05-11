@@ -36,7 +36,7 @@ function Home() {
 
   const name = profile?.name || 'Kishan Gowda D K'
   const role = profile?.role || 'Software Engineer'
-  const college = profile?.college || 'University Visvesvaraya College of Engineering, Bangalore'
+  const college = profile?.college || 'University of Visvesvaraya College of Engineering, Bangalore'
   const github = profile?.github_username || 'Kishan0507'
   const email = profile?.email || '257kishan@gmail.com'
 
