@@ -29,7 +29,7 @@ function Achievements() {
     {
       id: 4,
       icon: <Terminal size={24} color="var(--cyan)" />,
-      title: 'Impetus 24.0 Participant',
+      title: 'Impetus 24.0 Volunteer',
       description: 'Inter-college tech fest',
       date: 'April 2024',
       image: null,
