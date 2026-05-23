@@ -26,7 +26,7 @@ function App() {
         if (data && data.value) setVisitorCount(data.value)
       })
       .catch(() => {
-        const count = parseInt(localStorage.getItem('visitor_count') || '9')
+        const count = parseInt(localStorage.getItem('visitor_count') || '49')
         localStorage.setItem('visitor_count', count + 1)
         setVisitorCount(count + 1)
       })
